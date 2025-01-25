@@ -1,0 +1,441 @@
+/* Reseta o estilo de lista */
+ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    overflow-x: hidden; /* Evita que a página tenha barras de rolagem horizontais */
+}
+
+/* Cabeçalho */
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #00bcd4; /* Muda a cor no hover */
+}
+
+/* Home - Gradiente e Animação */
+#home {
+    background: linear-gradient(to left,#1765a5, #7baedb);
+    color: rgb(255, 255, 255);
+    padding: 100px 0; /* Maior padding para o header fixo não sobrepor o conteúdo */
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+#home h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    animation: slideInFromTop 1.3s ease-out;
+    color: #2c2a2a;
+}
+
+#home p {
+    font-size: 20px; /* Altere o tamanho da fonte */
+    color: #ffffff;   /* Se necessário, ajuste a cor */
+    line-height: 1.6; /* Opcional: melhora o espaçamento entre linhas */
+}
+
+#home ul {
+    list-style-type: none; /* Remove os marcadores da lista */
+    display: flex; /* Organiza os itens horizontalmente */
+    justify-content: center; /* Centraliza os itens */
+    align-items: center; /* Centraliza verticalmente os itens */
+    gap: 20px; /* Controla o espaçamento entre os itens */
+    padding: 0; /* Remove o espaçamento interno padrão */
+    margin: 20px 0; /* Espaçamento superior e inferior da lista */
+    color: #ffffff;
+    font-size: 16px;
+}
+
+#home li {
+    font-size: 20px;
+    margin: 0; /* Remove qualquer margem padrão */
+    opacity: 0;
+    animation: fadeIn 1s ease-out forwards;
+    animation-delay: 0.5s;
+    display: flex; /* Para alinhar imagem e texto */
+    flex-direction: column; /* Empilha a imagem e o texto */
+    align-items: center; /* Centraliza o conteúdo */
+}
+
+#home li img {
+    width: 80px; /* Tamanho da imagem */
+    height: 80px;
+    border-radius: 8px; /* Bordas arredondadas */
+    margin-bottom: 5px; /* Espaço menor entre imagem e texto */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Efeito de sombra */
+}
+
+
+/* Animações de fade e slide */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideInFromTop {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Seções (Sobre, Serviços, Contato) */
+#sobre, #servicos, #contato {
+    background: linear-gradient(to left,#1765a5, #7baedb);
+    color: #2c2a2a;
+    padding: 100px 0;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+#sobre h1, #servicos h1, #contato h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    opacity: 0;
+    animation: slideInFromTop 1.3s ease-out forwards;
+}
+
+#sobre ul, #servicos ul, #contato ul {
+    margin-top: 20px;
+    opacity: 0;
+    animation: slideInFromTop 1.3s ease-out forwards;
+}
+
+#sobre li, #servicos li, #contato li {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    opacity: 0;
+    animation: slideInFromTop 1.3s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Estilos Específicos de Cada Página */
+
+/* Página Sobre */
+#sobre {
+    background: linear-gradient(to left, #1765a5, #7baedb);
+    color: #fff;
+}
+
+#sobre h1 {
+    font-size: 2.5em;
+    color: #2c2a2a;
+}
+
+#sobre p {
+    font-size: 1.1em;
+    color: #ffffff;
+}
+
+#sobre ul li {
+    font-size: 1.1em;
+    color: hsl(0, 0%, 100%);
+}
+
+
+
+/* Página Serviços */
+#servicos {
+    background: linear-gradient(to left, #1765a5, #7baedb);
+    color: #fff;
+}
+
+#servicos h1 {
+    font-size: 2.5em;
+    color: #000000;
+}
+
+#servicos p {
+    font-size: 1.1em;
+}
+
+#servicos ul li {
+    font-size: 1.2em;
+    color: #fdfdfd;
+}
+
+/* Página Contato */
+#contato {
+    background: linear-gradient(to left,#ffffff, #ffffff);
+    color: #ffffff;
+}
+
+#contato h1 {
+    font-size: 2.5em;
+    color: #2c2a2a;
+}
+
+#contato p {
+    font-size: 1.2em;
+}
+
+#contato ul li {
+    font-size: 1.2em;
+    color: #ffffff;
+}
+
+/* Estilo geral para a seção de contato */
+#contato {
+    padding: 50px 0;
+    background-color: #f4f4f4;
+}
+
+/* Contêiner do texto */
+.contato-texto {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contato-texto h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;
+}
+
+.contato-texto p {
+    font-size: 1.1em;
+    color: #666;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* Estilo do formulário */
+form {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo das labels e inputs */
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    font-size: 1.1em;
+    color: #333;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+    box-sizing: border-box;
+}
+
+.form-group input:focus, .form-group textarea:focus {
+    outline: none;
+    border-color: #ff9800;
+}
+
+/* Estilo do botão de envio */
+button[type="submit"] {
+    background-color: #ff9800;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #f44336;
+}
+
+/* Estilo para o link do WhatsApp */
+#whatsapp-btn {
+    display: inline-block;
+    background-color: #25d366;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+#whatsapp-btn:hover {
+    background-color: #128c7e;
+}
+
+/* Estilo para a mensagem de telefone e e-mail */
+#contato p {
+    font-size: 1.1em;
+    color: #333;
+    text-align: center;
+    margin-top: 20px;
+}
+
+
+/* Galeria */
+#galeria img {
+    width: 100%;
+    height: auto;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#galeria img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* Botão WhatsApp */
+#whatsapp-btn {
+    display: inline-block;
+    background-color: #25d366;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    transition: background-color 0.3s, transform 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#whatsapp-btn:hover {
+    background-color: #128c7e;
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Rodapé */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+    margin-top: 0; /* Remove a margem acima */
+    margin-bottom: 0; /* Remove a margem abaixo */
+    position: relative; /* Garante que o rodapé se posiciona após o conteúdo */
+    bottom: 0;
+    width: 100%;
+}
+/* Efeitos de fade-in para seções com o scroll */
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+/* Animação de rotação para elementos com a classe .rotate */
+.rotate {
+    animation: rotateEffect 2s linear infinite;
+}
+
+@keyframes rotateEffect {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Efeito de Parallax para o fundo */
+#home {
+    position: relative;
+    overflow: hidden;
+}
+
+#home::after {
+    content: '';
+    background: url('path/to/your/background-image.jpg') no-repeat center center;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    transform: translateY(0);
+    animation: parallax 5s infinite linear;
+}
+
+@keyframes parallax {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(20px);
+    }
+}
