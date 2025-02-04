@@ -9,14 +9,14 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: #ffffff;
     overflow-x: hidden; /* Evita que a página tenha barras de rolagem horizontais */
 }
 
-/* Cabeçalho */
+
 header {
-    background-color: #333;
-    color: white;
+background: linear-gradient(to left,#1765a5, #7baedb);
+    color: #ffffff;
     padding: 10px 0;
     text-align: center;
     position: fixed;
@@ -25,6 +25,186 @@ header {
     z-index: 1000;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
+/* 🟢 Navbar Personalizada */
+.custom-navbar {
+    background: linear-gradient(to left,#1765a5, #7baedb); /* Cor de fundo da navbar */
+    height: 60px; /* Altura da navbar */
+    display: flex; /* Usa flexbox para alinhar os itens */
+    justify-content: space-between; /* Espalha logo e itens de navegação */
+    align-items: center; /* Alinha os itens verticalmente */
+    padding: 0 15px; /* Ajuste o padding para dar espaço nas laterais */
+    box-sizing: border-box; /* Garante que o padding não afete a largura total */
+
+}
+
+/* 🟠 Logo */
+.logo {
+    height: 180px; /* Ajuste o tamanho da logo para que caiba bem */
+    width: auto; /* Mantém a proporção correta */
+    margin-left: 15px; /* Espaço à esquerda da logo */
+}
+
+/* 🔵 Itens do Menu */
+.navbar-nav {
+    display: flex; /* Alinha os itens de navegação horizontalmente */
+}
+
+/* 🔴 Links do Menu */
+.navbar-nav .nav-link {
+    color: #000000 !important; /* Cor dos links */
+    font-size: 18px; /* Tamanho da fonte */
+    padding: 8px 12px; /* Espaço ao redor dos links */
+    transition: 0.3s; /* Efeito suave ao passar o mouse */
+}
+
+/* 🟡 Efeito Hover */
+.navbar-nav .nav-link:hover {
+    color: #00ADB5 !important; /* Cor ao passar o mouse */
+}
+
+/* 🟣 Ajustes para dispositivos móveis */
+@media (max-width: 991px) {
+    .custom-navbar {
+        height: 60px; /* Altura da navbar fixa */
+        padding: 0 15px; /* Padding ajustado */
+        
+    }
+
+    /* Logo no mobile */
+    .logo {
+        height: 180px; /* A logo vai ter a mesma altura no mobile */
+        margin-top: -70px; /* Move a logo para cima */
+    }
+
+    /* Organiza os itens em coluna e centraliza no mobile */
+    .navbar-nav {
+        flex-direction: flex; /* Itens em linha no mobile */
+        gap: 15px; /* Ajusta o espaço entre os itens */
+        align-items: center; /* Centraliza os itens */
+    }
+
+    .navbar-nav .nav-link {
+        font-size: 16px; /* Diminui o tamanho da fonte no mobile */
+        padding: 8px 12px; /* Ajusta o padding */
+    }
+
+   /* 🔥 Ajuste para o botão hambúrguer */
+   .navbar-toggler {
+    margin-top: -63px; /* Move o botão para cima */
+}
+}
+
+/* Define a área de cada slide */
+.carousel-item {
+    position: relative;
+    width: 100%;
+    height: 400px; /* Ajuste conforme necessário */
+    overflow: hidden;
+  }
+  
+  /* Container das imagens dentro de cada slide */
+  .carousel-images {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    gap: 10px; /* Espaço entre as duas imagens */
+  }
+  
+  /* Container para cada imagem para forçar tamanho igual */
+  .img-container {
+    flex: 1;
+    overflow: hidden;
+    height: 100%;
+  }
+  
+  /* Estilo para as imagens */
+  .img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Assegura que a imagem preencha o espaço sem distorção */
+  }
+  
+  /* Texto centralizado sobre o carrossel */
+  .carousel-caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    background: rgba(0, 0, 0, 0.5); /* Fundo semi-transparente para legibilidade */
+    padding: 15px 30px;
+    border-radius: 8px;
+    z-index: 2;
+  }
+  
+  /* Estilização dos títulos e parágrafos do carrossel */
+  .carousel-caption h2 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    margin-bottom: 10px;
+  }
+  
+  .carousel-caption p {
+    font-size: 16px;
+    color: #fff !important;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+    font-family: Georgia, serif;
+  }
+  
+/* Layout principal */
+.layout {
+    display: flex; /* Flexbox para organizar os elementos em linha */
+    align-items: center; /* Centraliza verticalmente */
+    justify-content: space-between; /* Espaçamento entre os elementos */
+    gap: 20px; /* Espaço entre texto e imagem */
+    padding: 20px; /* Espaçamento interno */
+    background-color: #f9f9f9; /* Cor de fundo */
+  }
+  
+  /* Bloco de Texto */
+  .layout .content {
+    flex: 1; /* Permite que o texto ocupe mais espaço, se necessário */
+  }
+  
+  .layout .content h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  .layout .content p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #ffffff00;
+  }
+  
+  /* Bloco de Imagem */
+  .layout .image {
+    flex: 1; /* Permite que a imagem ocupe o mesmo espaço que o texto */
+    text-align: center;
+  }
+  
+  .layout .image img {
+    max-width: 100%; /* Faz a imagem se ajustar ao tamanho do contêiner */
+    height: auto; /* Mantém a proporção da imagem */
+    border-radius: 8px; /* Adiciona cantos arredondados */
+  }
+ 
+  @media (max-width: 768px) {
+    .layout {
+      flex-direction: column; /* Alinha os elementos em coluna em telas pequenas */
+      text-align: center;
+    }
+  
+    .layout .image {
+      margin-top: 20px; /* Adiciona espaço acima da imagem */
+    }
+  }
+
+
+
 
 nav ul {
     list-style-type: none;
@@ -50,7 +230,7 @@ nav ul li a:hover {
 
 /* Home - Gradiente e Animação */
 #home {
-    background: linear-gradient(to left,#1765a5, #7baedb);
+    background: linear-gradient(to left,#ffffff, #ffffff);
     color: rgb(255, 255, 255);
     padding: 100px 0; /* Maior padding para o header fixo não sobrepor o conteúdo */
     text-align: center;
@@ -60,14 +240,13 @@ nav ul li a:hover {
 
 #home h1 {
     font-size: 3em;
-    margin-bottom: 20px;
-    animation: slideInFromTop 1.3s ease-out;
+    margin-bottom: px;
     color: #2c2a2a;
 }
 
 #home p {
     font-size: 20px; /* Altere o tamanho da fonte */
-    color: #ffffff;   /* Se necessário, ajuste a cor */
+    color: #2c2a2a;   /* Se necessário, ajuste a cor */
     line-height: 1.6; /* Opcional: melhora o espaçamento entre linhas */
 }
 
@@ -101,6 +280,178 @@ nav ul li a:hover {
     margin-bottom: 5px; /* Espaço menor entre imagem e texto */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Efeito de sombra */
 }
+
+
+/* Reset básico e tipografia */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.5;
+    color: #333;
+  }
+  
+  /* Seções Gerais */
+  .section {
+    padding: 40px 0;
+  }
+  
+  /* Container Centralizado */
+  .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  /* Seção de Apresentação */
+  #apresentacao h1 {
+    font-size: 32px;
+    margin-bottom: 10px;
+  }
+  #apresentacao .slogan {
+    color: #ed1c24;
+  }
+  #apresentacao p {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+  .btn-saiba-mais {
+    display: inline-block;
+    background-color: #1765a5;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  .btn-saiba-mais:hover {
+    background-color: #00adb5;
+  }
+  
+  /* Seção de Contato */
+  .contact-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  
+  /* Cada bloco de contato (Informações e Formulário) dentro de um quadrado */
+  .contact-info,
+  .contact-form {
+    background-color: #000000;
+    border: 2px solid #1765a5;
+    border-radius: 10px;
+    padding: 20px;
+    flex: 1 1 45%;
+    /* Garante que ambos os blocos tenham aproximadamente a mesma largura */
+  }
+  
+  /* Estilo para Central de Vendas */
+  .contact-info h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  .telefone a {
+    font-size: 20px;
+    color: #ed1c24;
+    text-decoration: none;
+  }
+  
+  /* Estilo para o formulário */
+  .contact-form h3 {
+    font-size: 22px;
+    margin-bottom: 15px;
+  }
+  .form-field {
+    margin-bottom: 15px;
+    text-align: left;
+  }
+  .form-field label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  .form-field input,
+  .form-field textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  .btn-enviar {
+    background-color: #1765a5;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  .btn-enviar:hover {
+    background-color: #00adb5;
+  }
+  
+  /* Responsividade para telas menores */
+  @media (max-width: 768px) {
+    .contact-container {
+      flex-direction: column;
+    }
+    .contact-info,
+    .contact-form {
+      flex: 1 1 100%;
+      margin-bottom: 20px;
+    }
+  }
+  
+
+
+#clientes {
+    text-align: center;
+    padding: 40px 0;
+    background-color: #f4f4f4;
+}
+
+.clientes-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 colunas por linha */
+    column-gap: 97px; /* Ajusta apenas a distância horizontal */
+    row-gap: 15px; /* Mantém a distância vertical menor */
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+
+.clientes-container a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff; /* Fundo branco */
+    padding: 5px; /* Reduz o espaço interno */
+    border: 1px solid black; /* Borda preta fina */
+    border-radius: 5px; /* Cantos arredondados menores */
+    width: 190px; /* Reduz a largura do quadrado */
+    height: 98px; /* Reduz a altura do quadrado */
+    overflow: hidden; /* Evita que a imagem ultrapasse os limites */
+
+}
+
+.clientes-container img {
+    width: 150px; /* Ajuste conforme necessário */
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.clientes-container a:hover {
+    transform: scale(1.05); /* Aumenta levemente o quadrado */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Adiciona um leve sombreado */
+}
+
 
 
 /* Animações de fade e slide */
@@ -210,6 +561,80 @@ nav ul li a:hover {
     color: #fdfdfd;
 }
 
+/* Estilo geral para as seções */
+.layout {
+    display: flex;
+    justify-content: center;
+    margin: 40px 0;
+}
+
+/* Caixa (bloco) que contém o texto e a imagem */
+.box {
+    display: flex;
+    justify-content: space-between;
+    width: 300%; /* A largura pode ser ajustada */
+    max-width: 11200px; /* Limite de largura */
+    height: 380px; /* Altura ajustável, pode ser modificada */
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 10px; /* Bordas arredondadas */
+    overflow: hidden; /* Evita que os elementos ultrapassem a borda */
+}
+
+/* Estilo para o conteúdo de texto */
+.content {
+    width: 50%;
+    padding-right: 20px;
+    overflow: hidden; /* Evita que o texto ultrapasse a área do quadrado */
+}
+
+.content h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.content p {
+    font-size: 16px;
+    color: #666;
+}
+
+/* Estilo para a imagem */
+.image {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    .layout {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .box {
+        flex-direction: column;
+    }
+
+    .content, .image {
+        width: 100%;
+        padding-right: 0;
+    }
+
+    .image img {
+        max-width: 100%;
+    }
+}
+
 /* Página Contato */
 #contato {
     background: linear-gradient(to left,#ffffff, #ffffff);
@@ -249,6 +674,7 @@ nav ul li a:hover {
 .contato-texto h1 {
     font-size: 2.5em;
     margin-bottom: 20px;
+    margin-top: 40px; /* Aumenta a distância para abaixar o texto */
     color: #333;
     text-align: center;
 }
@@ -375,16 +801,13 @@ button[type="submit"]:hover {
 
 /* Rodapé */
 footer {
+   background: linear-gradient(to left,#1765a5, #7baedb); 
+    color: white; /* Cor do texto */
     text-align: center;
     padding: 20px;
-    background-color: #333;
-    color: white;
-    margin-top: 0; /* Remove a margem acima */
-    margin-bottom: 0; /* Remove a margem abaixo */
-    position: relative; /* Garante que o rodapé se posiciona após o conteúdo */
-    bottom: 0;
     width: 100%;
 }
+
 /* Efeitos de fade-in para seções com o scroll */
 .fade-in {
     opacity: 0;
@@ -438,4 +861,14 @@ footer {
     100% {
         transform: translateY(20px);
     }
+}
+/* Para o body */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Garante que a altura mínima do body seja 100% da altura da tela */
+}
+/* Para o conteúdo principal (deve engolir o restante do espaço) */
+main {
+    flex-grow: 1; /* Isso faz o conteúdo crescer e empurrar o rodapé para o fundo */
 }
